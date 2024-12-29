@@ -47,7 +47,7 @@ const PlaceOrder = () => {
     }
 
     const onSubmitHandler = async (event) => {
-        event.preventDefalut()
+        event.preventDefault()
         try {
 
             let orderItems = []
@@ -117,7 +117,7 @@ const PlaceOrder = () => {
 
 
     return (
-        <form className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
+        <form onSubmit={onSubmitHandler} className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
             {/* --------------- Left side -------------------- */}
             <div className='flex flex-col gap-4 w-full sm:max-w-[480px]'>
 
